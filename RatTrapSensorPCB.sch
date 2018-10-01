@@ -354,9 +354,9 @@ F 3 "" H 3750 6450 60  0000 C CNN
 	1    3750 6450
 	-1   0    0    1   
 $EndComp
-Text GLabel 4100 6550 2    47   Input ~ 0
-ANT
 Text GLabel 4100 6350 2    47   Input ~ 0
+ANT
+Text GLabel 4100 6550 2    47   Input ~ 0
 GND
 Text Notes 3600 6800 0    47   ~ 0
 Antenna Connection
@@ -382,4 +382,19 @@ Wire Notes Line
 	4250 3350 6400 3350
 Text Notes 5150 5200 0    47   ~ 0
 LoRa Module
+$Comp
+L CONN_2 P6
+U 1 1 5B7E53D9
+P 3750 7150
+F 0 "P6" V 3700 7150 40  0000 C CNN
+F 1 "CONN_2" V 3800 7150 40  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 3750 7150 60  0001 C CNN
+F 3 "" H 3750 7150 60  0000 C CNN
+	1    3750 7150
+	-1   0    0    1   
+$EndComp
+Text GLabel 4100 7050 2    47   Input ~ 0
+ANT
+Text GLabel 4100 7250 2    47   Input ~ 0
+GND
 $EndSCHEMATC
