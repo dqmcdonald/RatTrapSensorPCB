@@ -1,6 +1,36 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:DQM
 LIBS:RatTrapSensorPCB-cache
-EELAYER 29 0
+EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -15,7 +45,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L DQM:ARDUPROMINI uP1
+L ARDUPROMINI uP1
 U 1 1 5B6264F8
 P 2900 2650
 F 0 "uP1" H 2700 2550 60  0000 C CNN
@@ -26,7 +56,7 @@ F 3 "" H 2900 2650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:SPST SW1
+L SPST SW1
 U 1 1 5B6265DC
 P 5800 5600
 F 0 "SW1" H 5800 5700 70  0000 C CNN
@@ -41,7 +71,7 @@ Wire Wire Line
 Wire Wire Line
 	4800 5600 4800 5950
 $Comp
-L power1:GND #PWR01
+L GND #PWR01
 U 1 1 5B626698
 P 4800 5950
 F 0 "#PWR01" H 4800 5950 30  0001 C CNN
@@ -54,7 +84,7 @@ $EndComp
 Text Notes 5400 5850 0    60   ~ 0
 Vibration Switch
 $Comp
-L DQM:LoRaSx1276 U1
+L LoRaSx1276 U1
 U 1 1 5B626DE3
 P 5300 4200
 F 0 "U1" H 5300 4350 60  0000 C CNN
@@ -139,7 +169,7 @@ V3.3
 Text GLabel 6050 4750 2    47   Input ~ 0
 D9
 $Comp
-L conn:CONN_2 P5
+L CONN_2 P5
 U 1 1 5B67DFA5
 P 4950 2750
 F 0 "P5" V 4900 2750 40  0000 C CNN
@@ -154,7 +184,7 @@ Vin
 Text GLabel 5650 2850 2    47   Input ~ 0
 GND
 $Comp
-L conn:CONN_3 K1
+L CONN_3 K1
 U 1 1 5B67E124
 P 1400 5700
 F 0 "K1" V 1350 5700 50  0000 C CNN
@@ -171,7 +201,7 @@ D1
 Text GLabel 1750 5800 2    47   Input ~ 0
 RST
 $Comp
-L conn:CONN_5 P1
+L CONN_5 P1
 U 1 1 5B67E212
 P 1400 6400
 F 0 "P1" V 1350 6400 50  0000 C CNN
@@ -193,7 +223,7 @@ Text GLabel 1800 6600 2    47   Input ~ 0
 D8
 NoConn ~ 2900 3950
 $Comp
-L conn:CONN_4 P2
+L CONN_4 P2
 U 1 1 5B67E395
 P 2500 5750
 F 0 "P2" V 2450 5750 50  0000 C CNN
@@ -212,14 +242,14 @@ A1
 Text GLabel 2850 5900 2    47   Input ~ 0
 A0
 Wire Wire Line
-	5300 2850 5350 2850
+	5300 2850 5650 2850
 Wire Wire Line
-	5300 2650 5350 2650
+	5300 2650 5650 2650
 Wire Wire Line
 	5350 2850 5350 3000
 Connection ~ 5350 2850
 $Comp
-L power1:GND #PWR02
+L GND #PWR02
 U 1 1 5B67E54E
 P 5350 3000
 F 0 "#PWR02" H 5350 3000 30  0001 C CNN
@@ -233,7 +263,7 @@ Wire Wire Line
 	5350 2650 5350 2500
 Connection ~ 5350 2650
 $Comp
-L power1:PWR_FLAG #FLG03
+L PWR_FLAG #FLG03
 U 1 1 5B67E590
 P 5350 2500
 F 0 "#FLG03" H 5350 2595 30  0001 C CNN
@@ -244,7 +274,7 @@ F 3 "" H 5350 2500 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conn:CONN_4 P3
+L CONN_4 P3
 U 1 1 5B67E9D2
 P 3750 5750
 F 0 "P3" V 3700 5750 50  0000 C CNN
@@ -267,7 +297,7 @@ D2
 Text GLabel 6300 5600 2    47   Input ~ 0
 D2
 $Comp
-L device:R R1
+L R R1
 U 1 1 5B68AA56
 P 5100 6500
 F 0 "R1" V 5180 6500 40  0000 C CNN
@@ -278,7 +308,7 @@ F 3 "" H 5100 6500 30  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L device:LED D1
+L LED D1
 U 1 1 5B68AAC9
 P 5750 6500
 F 0 "D1" H 5750 6600 50  0000 C CNN
@@ -295,7 +325,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 6500 4750 6800
 $Comp
-L power1:GND #PWR04
+L GND #PWR04
 U 1 1 5B68AC13
 P 4750 6800
 F 0 "#PWR04" H 4750 6800 30  0001 C CNN
@@ -314,7 +344,7 @@ Optional LED on D4
 Text Notes 3900 6100 0    47   ~ 0
 Power Bus
 $Comp
-L conn:CONN_2 P4
+L CONN_2 P4
 U 1 1 5B68ACFE
 P 3750 6450
 F 0 "P4" V 3700 6450 40  0000 C CNN
@@ -331,11 +361,15 @@ GND
 Text Notes 3600 6800 0    47   ~ 0
 Antenna Connection
 Wire Notes Line
+	1350 2350 3400 2350
+Wire Notes Line
 	3400 2350 3400 5150
 Wire Notes Line
 	3400 5150 1200 5150
 Wire Notes Line
 	1200 5150 1200 2350
+Wire Notes Line
+	1200 2350 1450 2350
 Text Notes 1950 5250 0    47   ~ 0
 Arduino Pro Mini
 Wire Notes Line
@@ -349,7 +383,7 @@ Wire Notes Line
 Text Notes 5150 5200 0    47   ~ 0
 LoRa Module
 $Comp
-L conn:CONN_2 P6
+L CONN_2 P6
 U 1 1 5B7E53D9
 P 3750 7150
 F 0 "P6" V 3700 7150 40  0000 C CNN
@@ -363,10 +397,4 @@ Text GLabel 4100 7050 2    47   Input ~ 0
 ANT
 Text GLabel 4100 7250 2    47   Input ~ 0
 GND
-Wire Wire Line
-	5350 2850 5650 2850
-Wire Wire Line
-	5350 2650 5650 2650
-Wire Notes Line
-	1200 2350 3400 2350
 $EndSCHEMATC
