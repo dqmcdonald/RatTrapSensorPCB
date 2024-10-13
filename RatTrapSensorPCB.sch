@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "RatTrapSensorPCB"
-Date "2/8/2018"
-Rev "1.0"
+Date "2020-06-30"
+Rev "1.3"
 Comp "Quentin McDonald"
 Comment1 "PCB for transmitter of LoRa rat trap sensor"
 Comment2 ""
@@ -94,8 +94,6 @@ Text GLabel 1700 4750 0    47   Input ~ 0
 D8
 Text GLabel 1700 4850 0    47   Input ~ 0
 D9
-Text GLabel 2900 3750 2    47   Input ~ 0
-Vin
 Text GLabel 2900 3850 2    47   Input ~ 0
 GND
 Text GLabel 2900 4050 2    47   Input ~ 0
@@ -149,10 +147,6 @@ F 3 "" H 4950 2750 60  0000 C CNN
 	1    4950 2750
 	-1   0    0    1   
 $EndComp
-Text GLabel 5650 2650 2    47   Input ~ 0
-Vin
-Text GLabel 5650 2850 2    47   Input ~ 0
-GND
 $Comp
 L conn:CONN_3 K1
 U 1 1 5B67E124
@@ -369,4 +363,69 @@ Wire Wire Line
 	5350 2650 5650 2650
 Wire Notes Line
 	1200 2350 3400 2350
+$Comp
+L device:C C1
+U 1 1 5EFA7C98
+P 5800 2750
+F 0 "C1" H 5915 2788 40  0000 L CNN
+F 1 "1uF" H 5915 2712 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5838 2600 30  0001 C CNN
+F 3 "" H 5800 2750 60  0000 C CNN
+	1    5800 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2650 5650 2550
+Wire Wire Line
+	5650 2550 5800 2550
+Wire Wire Line
+	5650 2850 5650 2950
+Wire Wire Line
+	5650 2950 5800 2950
+Wire Wire Line
+	5800 2550 6300 2550
+Connection ~ 5800 2550
+$Comp
+L Regulator_Linear:MCP1703A-1202_SOT223 U2
+U 1 1 5EFA8CDB
+P 6600 2550
+F 0 "U2" H 6600 2792 50  0000 C CNN
+F 1 "MCP1703A-1202_SOT223" H 6600 2701 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223-3_TabPin2" H 6600 2750 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20005122B.pdf" H 6600 2500 50  0001 C CNN
+	1    6600 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 2950 6600 2950
+Wire Wire Line
+	6600 2950 6600 2850
+Connection ~ 5800 2950
+Wire Wire Line
+	6900 2550 7050 2550
+Wire Wire Line
+	6600 2950 7050 2950
+Connection ~ 6600 2950
+$Comp
+L device:C C2
+U 1 1 5EFAA901
+P 7050 2750
+F 0 "C2" H 7165 2788 40  0000 L CNN
+F 1 "1uF" H 7165 2712 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 7088 2600 30  0001 C CNN
+F 3 "" H 7050 2750 60  0000 C CNN
+	1    7050 2750
+	1    0    0    -1  
+$EndComp
+Connection ~ 7050 2550
+Connection ~ 7050 2950
+Wire Wire Line
+	7050 2950 7300 2950
+Text GLabel 7300 2550 2    47   Input ~ 0
+V3.3
+Text GLabel 7300 2950 2    47   Input ~ 0
+GND
+NoConn ~ 2900 3750
+Wire Wire Line
+	7050 2550 7300 2550
 $EndSCHEMATC
